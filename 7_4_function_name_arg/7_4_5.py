@@ -14,3 +14,18 @@ Sample Output:
 <DIV>Python is best!</DIV>
 <div>Python is best!</div>
 '''
+
+
+# put your python code here
+def get_teg(text, t="h1", up=True):
+    if up == True:
+        t = t.upper()
+        str_out = "<" + t + ">" + text + "</" + t + ">"
+    else:
+        str_out = "<" + t + ">" + text + "</" + t + ">"
+    return str_out
+
+
+str_in = input()
+print(get_teg(str_in, t="div", up=True))
+print(get_teg(str_in, t="div", up=False))
